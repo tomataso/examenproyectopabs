@@ -65,6 +65,7 @@ app.use( function(req, res, next) {
 
 const entrenador = require('./components/entrenador');
 const pokemon = require('./components/pokemon');
+const tipo = require('./components/tipo');
 
 
 
@@ -74,6 +75,7 @@ const pokemon = require('./components/pokemon');
 
 app.use('/api', entrenador);
 app.use('/api', pokemon);
+app.use('/api', tipo);
 
 
 // Se guarda todo lo que se ha realizado
