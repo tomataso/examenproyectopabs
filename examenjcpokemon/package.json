@@ -1,7 +1,7 @@
 {
   "name": "examenjcpokemon",
   "version": "1.0.0",
-  "description": "Esto es para el examen, vea profe las instale bien.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
