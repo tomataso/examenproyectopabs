@@ -10,106 +10,106 @@ Responsabilidades del servicio
 
 
 //funciones--------------------------------------
-function registrarPokemon(pPokemon){
+function registrarPokemon(pPokemon) {
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/registrarPokemon',
-        type : 'post',
-        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
-        dataType : 'json',
-        async : false,
-        data:{
+        url: 'http://localhost:4000/api/registrarPokemon',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
 
-            codigoPokemon : pPokemon[0],
-            nombrePokemon : pPokemon[1],
-            idTipo : pPokemon[2],
-            Tipo : pPokemon[3],
-            idTipo : pPokemon[4],
-            Tipo : pPokemon[5],
-            fotoPokemon : pPokemon[6]
-        
+            codigoPokemon: pPokemon[0],
+            nombrePokemon: pPokemon[1],
+            idTipo: pPokemon[2],
+            Tipo: pPokemon[3],
+            idTipo: pPokemon[4],
+            Tipo: pPokemon[5],
+            fotoPokemon: pPokemon[6]
+
         }
-      });
-    
-      peticion.done(function(response){
-       respuesta = response;
-      });
-    
-      peticion.fail(function(response){
-       
-      });
+    });
 
-      return respuesta;
+    peticion.done(function (response) {
+        respuesta = response;
+    });
+
+    peticion.fail(function (response) {
+
+    });
+
+    return respuesta;
 }
 
 
-function obtenerListaTipos(){
+function obtenerListaTipos() {
     let lista = [];
 
     let respuesta = '';
     let peticion = $.ajax({
         // CAMBIAR ESTO POR TIPOS
-        url : 'http://localhost:4000/api/listarTipos',
-        type : 'get',
-        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
-        dataType : 'json',
-        async : false,
-        data:{
-            
-        }
-      });
-    
-      peticion.done(function(response){
-       respuesta = response;
-      });
-    
-      peticion.fail(function(response){
-       
-      });
+        url: 'http://localhost:4000/api/listarTipos',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
 
-      return respuesta;
-    
+        }
+    });
+
+    peticion.done(function (response) {
+        respuesta = response;
+    });
+
+    peticion.fail(function (response) {
+
+    });
+
+    return respuesta;
+
     return lista;
 }
 
-function obtenerListaPokemon(){
+function obtenerListaPokemon() {
     let lista = [];
 
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/listarPokemon',
-        type : 'get',
-        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
-        dataType : 'json',
-        async : false,
-        data:{
-            
-        }
-      });
-    
-      peticion.done(function(response){
-       respuesta = response;
-      });
-    
-      peticion.fail(function(response){
-       
-      });
+        url: 'http://localhost:4000/api/listarPokemon',
+        type: 'get',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
 
-      return respuesta;
-    
+        }
+    });
+
+    peticion.done(function (response) {
+        respuesta = response;
+    });
+
+    peticion.fail(function (response) {
+
+    });
+
+    return respuesta;
+
     return lista;
 }
 
 
 
-function ftnGenerarCodigo (pListaDatos){
-    
+function ftnGenerarCodigo(pListaDatos) {
+
     let codigo = null;
 
-    if(pListaDatos == ''){
+    if (pListaDatos == '') {
         codigo = 1;
     } else {
-        codigo = Number(pListaDatos[pListaDatos.length-1]['codigo']) + 1; 
+        codigo = Number(pListaDatos[pListaDatos.length - 1]['codigoPokemon']) + 1;
     }
 
     return codigo;

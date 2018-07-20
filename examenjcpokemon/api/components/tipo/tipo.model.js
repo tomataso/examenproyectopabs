@@ -3,9 +3,9 @@ let mongoose = require('mongoose');
 
 let tipoSchema = new mongoose.Schema({
 
- Tipo: {type: String, required: true}
-    
+    Tipo: { type: String, required: true }
+
 });
 
-module.exports = mongoose.model('Tipo', tipoSchema); 
+module.exports = mongoose.model('Tipo', tipoSchema);
 
