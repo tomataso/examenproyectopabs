@@ -63,9 +63,9 @@ app.use( function(req, res, next) {
  * Exportams todas las rutas dentro del index.js
  */
 
-const entrenador = require('./components/entrenador.route');
-const pokemon = require('./components/pokemon.route');
-const tipo = require('./components/tipo.route');
+const entrenador = require('./components/entrenador/entrenador.route');
+const pokemon = require('./components/pokemon/pokemon.route');
+const tipo = require('./components/tipo/tipo.route');
 
 
 
