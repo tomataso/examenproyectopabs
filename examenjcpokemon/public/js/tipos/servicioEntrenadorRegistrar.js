@@ -8,21 +8,17 @@ Responsabilidades del servicio
 'use strict';
 
 
-function registrarEntrenador(nCodigoEntrenador, sNombreEntrenador, nEdad, selectSexo, imagenUrl) {
+function registrarTipo() {
     let respuesta = '';
     let peticion = $.ajax({
-        url: 'http://localhost:4000/api/registrarEntrenador',
+        url: 'http://localhost:4000/api//registrarTipo',
         type: 'post',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
         data: {
 
-            codigoEntrenador: nCodigoEntrenador,
-            nombreEntrenador: sNombreEntrenador,
-            edad: nEdad,
-            sexo: selectSexo,
-            foto: imagenUrl
+
         }
     });
 
@@ -39,15 +35,3 @@ function registrarEntrenador(nCodigoEntrenador, sNombreEntrenador, nEdad, select
 
 
 
-function ftnGenerarCodigo(pListaDatos) {
-
-    let codigo = null;
-
-    if (pListaDatos == '') {
-        codigo = 1;
-    } else {
-        codigo = Number(pListaDatos[pListaDatos.length - 1]['codigoEntrenador']) + 1;
-    }
-
-    return codigo;
-};

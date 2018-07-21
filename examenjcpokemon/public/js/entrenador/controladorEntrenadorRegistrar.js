@@ -35,7 +35,7 @@ function obtenerDatosEntrenador() {
     let bError = false;
 
     let nCodigoEntrenador = inputCodigoEntrenador.value;
-    let sNombreEntrenador = sNombreEntrenador.value;
+    let sNombreEntrenador = inputNombreEntrenador.value;
     let nEdad = Number(inputEdad.value);
     let selectSexo = selectSexo.value;
 
