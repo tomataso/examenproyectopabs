@@ -12,7 +12,7 @@ router.route('/registrarEntrenador')
 
 router.route('/agregarPokemon')
     .post(function (req, res) {
-        entrenador.agregar_titulo(req, res);
+        entrenador.agregarPokemon(req, res);
     });
 
 router.route('/listarEntrenador')

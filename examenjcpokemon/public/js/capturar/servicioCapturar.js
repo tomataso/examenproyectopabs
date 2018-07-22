@@ -1,4 +1,4 @@
-function agregarPokemon(numeroPoke, cPoke){
+function agregarPokemon(infoBd){
    
     let respuesta = '';
     let peticion = $.ajax({
@@ -9,9 +9,9 @@ function agregarPokemon(numeroPoke, cPoke){
         async : false,
         data:{
 
-            _id : id,
-            codigoPokemon : cPoke,
-            nombrePokemon : numeroPoke,
+            _id : infoBd[0],
+            codigoPokemon : infoBd[2],
+            nombrePokemon : infoBd[3],
             
         }
       });

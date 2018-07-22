@@ -43,7 +43,7 @@ module.exports.agregarPokemon = function (req, res) {
             {
                 'equipoPokemon':
                 {
-                  
+                    codigoPokemon :  req.body.codigoPokemon,
                     nombrePokemon: req.body.nombrePokemon
 
                 }

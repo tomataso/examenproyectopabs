@@ -48,25 +48,41 @@ function imprimirListaEntrenador(pFiltro){
             let cNombre = fila.insertCell();
             let cEdad = fila.insertCell();
             let cSexo = fila.insertCell();
+            let btns = fila.insertCell();
  
     
             let imagen = document.createElement('img');
             imagen.src = listaEntrenador[i]['foto'];
             imagen.classList.add('imageSettings');
     
-            foto.appendChild(imagen);
+           
     
+            let btnAsignarEquipo = document.createElement('input');
+            btnAsignarEquipo.type = 'button';
+            btnAsignarEquipo.value = 'Asignar Equipo';
+            btnAsignarEquipo.name = listaEntrenador[i]['_id'];
+            btnAsignarEquipo.classList.add('btn-list');
+            btnAsignarEquipo.addEventListener('click', ftnAsignarEquipo);
 
             cCodigoEntrenador.innerHTML = listaEntrenador[i]['codigoEntrenador'];
             cNombre.innerHTML = listaEntrenador[i]['nombreEntrenador'];
             cEdad.innerHTML = listaEntrenador[i]['edad'];
             cSexo.innerHTML = listaEntrenador[i]['sexo'];
 
+            foto.appendChild(imagen);
+            btns.appendChild(btnAsignarEquipo);
 
+            
         }
         
     }
 
+};
+
+function ftnAsignarEquipo(){
+	let id = this.name;
+    //window.location.replace('./capturarPokemon.html?id' + id);
+    window.location.replace('./capturarPokemon?id' + id);
 };
 
 

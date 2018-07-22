@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
+<html lang=es>
+  <head>
+    <meta charset="utf-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Capturar</title>
 
-</head>
-<body>
-    <form>
-        <select name="" id="sltEntrenador">
-
-        </select>
-
-        <label for="numeroPoke">Número de Pokémon</label>
-        <input type="number" id="numeroPoke">
-
-        <label for="nombrePoke">Nombre del Pokémon</label>
-        <select id="nombrePoke"></select>
-
-
-        <button type="button" id="btnAgregar">Agregar Pokémon</button>
+  </head>
+  <body>
+    <h3 class="titulo-lista">Capturar Pokémon</h3>
+    <form action="">
+      <div class=" field filtro">
+        <input type="text" name="inputBusqueda" id="inputBusqueda" placeholder="Busqueda">
+        <label for="inputBusqueda"><i class="fas fa-search"></i>  Búsqueda</label>
+      </div>
     </form>
+    <div class="wrapper-listar estudproy">
+
+      <table id="tblPokemon">
+        <thead class="encabezados">
+            <th>Número Pokédex</th>
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            
+        </tbody>
+      </table>
+  
     <script src="../../js/jquery-3.3.1.js"></script>
+    <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+    <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 
 
-
+    <script src="../../js/capturar/servicioCapturar.js"></script>
+    <script src="../../js/entrenador/servicioEntrenadorListar.js"></script>
+    <script src="../../js/pokemon/servicioPokemonListar.js"></script>
 
     <script src="../../js/capturar/controladorCapturar.js"></script>
-    <script src="../../js/capturar/servicioCapturar.js"></script>
 
-</body>
+  
+    
+  </body>
 </html>
