@@ -18,9 +18,9 @@ $(function () {
                 let id = result[0].public_id;
                 console.log(id);
                 imagenUrl = 'https://res.cloudinary.com/dyrhofccj/image/upload/' + id;
-                imagenUrl = processImage(id);
+                //imagenUrl = processImage(id);
                 console.log(imagenUrl);
-                document.querySelector('#txtImagen').src = imagenUrl;
+                document.querySelector('#txtImagenEntrenador').src = imagenUrl;
                 return imagenUrl;
             });
     });

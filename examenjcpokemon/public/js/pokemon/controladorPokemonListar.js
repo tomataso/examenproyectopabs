@@ -27,11 +27,12 @@ function ListarPokemon(){
         
             let fila = tbody.insertRow();
 
+            let fotoPokemon = fila.insertCell();
             let celdaCodigoPokemon = fila.insertCell();
             let celdanombrePokemon = fila.insertCell();
             let celdatipo1 = fila.insertCell();
             let celdatipo2 = fila.insertCell();
-            let fotoPokemon = fila.insertCell();
+          
 
             let imagen = document.createElement('img');
             imagen.src = listaPokemon[i]['fotoPokemon'];
