@@ -11,7 +11,8 @@ Responsabilidades del controlador
 
 //variables globales------------------------------------------
 
-const btnRegistrarPokemon = document.querySelector('#btnRegistrar');
+const btnRegistrarPokemon = document.querySelector('#btnRegistrarPokemon');
+btnRegistrarPokemon.addEventListener('click', obtenerDatosPokemon);
 
 const inputCodigo = document.querySelector('#codigoPokemon');
 
@@ -22,16 +23,8 @@ const selectTipo2 = document.querySelector('#tipo2Poke');
 
 
 
-//listeners---------------------------------------------------
-btnRegistrarPokemon.addEventListener('click', function () {
-
-    obtenerDatosPokemon();
-
-});
-
 //loads------------------------------------------------------
 window.onload = function () {
-
 
     let listaTipos = obtenerListaTipo();
 

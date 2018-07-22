@@ -12,14 +12,12 @@ Responsabilidades del controlador
 
 //variables globales------------------------------------------
 const botonRegistrar = document.querySelector('#btnRegistrarEntrenador');
+botonRegistrar.addEventListener('click', obtenerDatosEntrenador);
 
 const inputCodigoEntrenador = document.querySelector('#codigoEntrenador');
 const inputNombreEntrenador = document.querySelector('#txtNombreEntrenador');
 const inputEdad = document.querySelector('#txtEdad');
 const selectSexo = document.querySelector('#selectSexo');
-
-//listeners---------------------------------------------------
-botonRegistrar.addEventListener('click', obtenerDatosEntrenador);
 
 
 
@@ -30,7 +28,7 @@ function obtenerDatosEntrenador() {
     let nCodigoEntrenador = inputCodigoEntrenador.value;
     let sNombreEntrenador = inputNombreEntrenador.value;
     let nEdad = Number(inputEdad.value);
-    let selectSexo = selectSexo.value;
+    let sselectSexo = selectSexo.value;
 
 
 
@@ -46,7 +44,7 @@ function obtenerDatosEntrenador() {
         console.log('No se pudo registrar el Entrenador');
     } else {
         console.log(imagenUrl);
-        registrarPersona(nCodigoEntrenador, sNombreEntrenador, nEdad, selectSexo, imagenUrl);
+        registrarEntrenador(nCodigoEntrenador, sNombreEntrenador, nEdad, sselectSexo, imagenUrl);
         swal({
             type: 'success',
             title: 'Registro exitoso',

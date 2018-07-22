@@ -1,11 +1,11 @@
 'use strict';
-const pokemonModel = require('./tipo.model');
+const tipoModel = require('./tipo.model');
 
 module.exports.registrar = function (req, res) {
 
     let nuevoTipo = new tipoModel({
 
-        Tipo: req.body.Tipo
+        tipo: req.body.tipo
 
     });
 

@@ -43,13 +43,13 @@ function registrarPokemon(pPokemon) {
 }
 
 
-function obtenerListaTipos() {
+function obtenerListaTipo() {
     let lista = [];
 
     let respuesta = '';
     let peticion = $.ajax({
         // CAMBIAR ESTO POR TIPOS
-        url: 'http://localhost:4000/api/listarTipos',
+        url: 'http://localhost:4000/api/listarTipo',
         type: 'get',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',

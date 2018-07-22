@@ -7,14 +7,14 @@ let pokemonSchema = new mongoose.Schema({
     nombrePokemon : {type : String, unique : true, required : true},
     tipo1 : [
         {
-            idTipo: {type: String, required: true},
-            Tipo: {type: String, required: true},
+            idtipo: {type: String, required: true},
+            tipo: {type: String, required: true},
         }
     ],
     tipo2 : [
         {
-            idTipo: {type: String, required: false},
-            Tipo: {type: String, required: false},
+            idtipo: {type: String, required: false},
+            tipo: {type: String, required: false},
         }
     ],
 

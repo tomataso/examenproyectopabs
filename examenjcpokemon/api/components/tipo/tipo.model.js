@@ -1,11 +1,13 @@
+
 'use strict';
 let mongoose = require('mongoose');
 
 let tipoSchema = new mongoose.Schema({
 
-    Tipo: { type: String, required: true }
+
+    tipo : {type : String, unique : true, required : true},
 
 });
 
-module.exports = mongoose.model('Tipo', tipoSchema);
+module.exports = mongoose.model('Tipo', tipoSchema); 
 
