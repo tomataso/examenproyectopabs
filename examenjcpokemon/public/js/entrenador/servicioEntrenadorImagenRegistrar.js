@@ -6,7 +6,7 @@ $(function () {
     $.cloudinary.config({ cloud_name: 'dyrhofccj', api_key: '197828935125463' });
 
     // Upload button
-    let uploadButton = $('#btnSeleccionarImagen');
+    let uploadButton = $('#btnSeleccionarImagenEntrenador');
 
     // Upload button event
     uploadButton.on('click', function (e) {
@@ -20,7 +20,7 @@ $(function () {
                 imagenUrl = 'https://res.cloudinary.com/dyrhofccj/image/upload/' + id;
                 imagenUrl = processImage(id);
                 console.log(imagenUrl);
-                //document.querySelector('#txtImagen').src = imagenUrl;
+                document.querySelector('#txtImagen').src = imagenUrl;
                 return imagenUrl;
             });
     });

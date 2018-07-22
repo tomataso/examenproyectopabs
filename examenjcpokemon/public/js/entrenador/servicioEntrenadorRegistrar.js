@@ -39,15 +39,31 @@ function registrarEntrenador(nCodigoEntrenador, sNombreEntrenador, nEdad, select
 
 
 
-function ftnGenerarCodigo(pListaDatos) {
 
-    let codigo = null;
+function obtenerListaEntrenador(){
+    let listaEntrenador = [];
 
-    if (pListaDatos == '') {
-        codigo = 1;
-    } else {
-        codigo = Number(pListaDatos[pListaDatos.length - 1]['codigoEntrenador']) + 1;
-    }
+    let respuesta = '';
+    let peticion = $.ajax({
+        url : 'http://localhost:4000/api/listarEntrenador',
+        type : 'get',
+        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType : 'json',
+        async : false,
+        data:{
+            
+        }
+      });
+    
+      peticion.done(function(response){
+       respuesta = response;
+      });
+    
+      peticion.fail(function(response){
+       
+      });
 
-    return codigo;
-};
+      return respuesta;
+    
+    return listaEntrenador;
+}

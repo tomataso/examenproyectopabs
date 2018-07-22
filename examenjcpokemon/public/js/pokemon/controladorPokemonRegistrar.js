@@ -32,13 +32,10 @@ btnRegistrarPokemon.addEventListener('click', function () {
 //loads------------------------------------------------------
 window.onload = function () {
 
-    let codigo = ftnGenerarCodigo(obtenerListaPokemon());
 
-    // Hacer un moddle con tipos de pokemones quemados dentro de la base de datos.
     let listaTipos = obtenerListaTipo();
 
 
-    ftnCamposAnnadidos(codigo);
     ftnCreadorDropTipo(selectTipo1, listaTipos);
     ftnCreadorDropTipo(selectTipo2, listaTipos);
 
@@ -46,6 +43,7 @@ window.onload = function () {
 
 //funciones-------------------------------------------------
 function obtenerDatosPokemon() {
+    
     let infoPokemon = [];
     let bError = false;
 
@@ -122,6 +120,7 @@ function validar() {
 function limpiarFormulario() {
 
     inputNombrePokemon.value = '';
+    inputCodigo.value = '';
 
 };
 
@@ -143,11 +142,5 @@ function ftnCreadorDropTipo(pElemento, pListaDatos) {
 };
 
 
-
-function ftnCamposAnnadidos(pCodigo) {
-
-    inputCodigo.value = pCodigo;
-    inputCodigo.setAttribute('disabled', true);
-};
 
 

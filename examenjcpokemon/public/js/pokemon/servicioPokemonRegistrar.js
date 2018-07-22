@@ -102,17 +102,4 @@ function obtenerListaPokemon() {
 
 
 
-function ftnGenerarCodigo(pListaDatos) {
-
-    let codigo = null;
-
-    if (pListaDatos == '') {
-        codigo = 1;
-    } else {
-        codigo = Number(pListaDatos[pListaDatos.length - 1]['codigoPokemon']) + 1;
-    }
-
-    return codigo;
-};
-
 

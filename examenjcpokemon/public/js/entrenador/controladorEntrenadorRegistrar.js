@@ -22,13 +22,6 @@ const selectSexo = document.querySelector('#selectSexo');
 botonRegistrar.addEventListener('click', obtenerDatosEntrenador);
 
 
-//loads------------------------------------------------------
-window.onload = function () {
-
-    let codigo = ftnGenerarCodigo(obtenerListaEntrenador());
-
-    ftnCamposAnnadidos(codigo);
-};
 
 function obtenerDatosEntrenador() {
 
@@ -108,8 +101,3 @@ function limpiarFormulario() {
 
 }
 
-function ftnCamposAnnadidos(pCodigo) {
-
-    inputCodigo.value = pCodigo;
-    inputCodigo.setAttribute('disabled', true);
-};
