@@ -7,17 +7,8 @@ module.exports.registrar = function(req, res){
 
         codigoPokemon : req.body.codigoPokemon,
         nombrePokemon : req.body.nombrePokemon,
-
-        tipo1 : [{
-            idTipo : req.body.idTipo,
-            Tipo : req.body.Tipo
-        }],
-
-        tipo2 : [{
-            idTipo : req.body.idTipo,
-            Tipo : req.body.Tipo
-        }],
-
+        tipo1 :  req.body.tipo1,
+        tipo2 :  req.body.tipo2,
         fotoPokemon : req.body.fotoPokemon
       
     });

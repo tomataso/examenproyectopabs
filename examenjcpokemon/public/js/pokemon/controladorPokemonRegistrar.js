@@ -18,21 +18,10 @@ const inputCodigo = document.querySelector('#codigoPokemon');
 
 const inputNombrePokemon = document.querySelector('#txtNombrePokemon');
 
-const selectTipo1 = document.querySelector('#tipo1Poke');
-const selectTipo2 = document.querySelector('#tipo2Poke');
+const selectTipo1 = document.querySelector('#slttipo1Poke');
+const selectTipo2 = document.querySelector('#slttipo2Poke');
 
 
-
-//loads------------------------------------------------------
-window.onload = function () {
-
-   let listaTipo = obtenerListaTipo();
-
-
-    ftnCreadorDropTipo(selectTipo1, listaTipo);
-    ftnCreadorDropTipo(selectTipo2, listaTipo);
-
-};
 
 //funciones-------------------------------------------------
 function obtenerDatosPokemon() {
@@ -43,6 +32,9 @@ function obtenerDatosPokemon() {
     let nCodigo = inputCodigo.value;
 
     let sNombrePokemon = inputNombrePokemon.value;
+
+
+   // let sselectSexo = selectSexo.value;
 
     let optionTipo1 = selectTipo1.options.selectedIndex;
     let sTipo1 = selectTipo1.options[optionTipo1].innerHTML;
@@ -55,7 +47,7 @@ function obtenerDatosPokemon() {
 
 
 
-    infoPokemon.push(nCodigo, sNombrePokemon, sTipo1, sTipo1Id, sTipo2, sTipo2Id, imagenUrl);
+    infoPokemon.push(nCodigo, sNombrePokemon, sTipo1, sTipo2, imagenUrl);
 
     bError = validar();
     if (bError == true) {
@@ -115,37 +107,44 @@ function limpiarFormulario() {
 };
 
 
-function ftnCreadorDropTipo1(tipo1, listaTipos) {
-
-    for (let i = 0; i < listaTipos.length; i++) {
-
-        let id = listaTipos[i]['_id'];
-        let tipo1 = listaTipos[i]['Tipo'];
-        let optionElement = document.createElement("option")
 
 
-        optionElement.appendChild(tipo1);
-        optionElement.setAttribute('value', id);
-        tipo1.appendChild(optionElement);
+creaDataListTipo1();
+creaDataListTipo2();
 
-    }
-};
-
-
-function ftnCreadorDropTipo2(tipo2, listaTipos) {
-
-    for (let i = 0; i < listaTipos.length; i++) {
-
-        let id = listaTipos[i]['_id'];
-        let tipo2 = listaTipos[i]['Tipo'];
-        let optionElement = document.createElement("option")
+function creaDataListTipo1 () {
+    let listaTipo = obtenerListaTipo();
+    
+    for (let i = 0; i < listaTipo.length; i++) {
 
 
-        optionElement.appendChild(tipo2);
-        optionElement.setAttribute('value', id);
-        tipo2.appendChild(optionElement);
+        let option = document.createElement("option");
+        option.text = listaTipo[i]['tipo'];
+        option.value = listaTipo[i]['tipo'];
+        let select = document.querySelector("#slttipo1Poke");
+        select.add(option);
+   
+    }  
 
-    }
-};
+    console.log(listaTipo);
+    
+}
 
 
+function creaDataListTipo2 () {
+    let listaTipo = obtenerListaTipo();
+    
+    for (let i = 0; i < listaTipo.length; i++) {
+
+
+        let option = document.createElement("option");
+        option.text = listaTipo[i]['tipo'];
+        option.value = listaTipo[i]['tipo'];
+        let select = document.querySelector("#slttipo2Poke");
+        select.add(option);
+   
+    }  
+
+    console.log(listaTipo);
+    
+}

@@ -23,7 +23,7 @@ module.exports.registrar = function (req, res) {
 
 };
 
-module.exports.listarTipo = function (req, res) {
+module.exports.listar = function (req, res) {
     tipoModel.find().then(
         function (tipo) {
             res.send(tipo);
@@ -31,7 +31,7 @@ module.exports.listarTipo = function (req, res) {
 };
 
 
-module.exports.buscarTipo = function (req, res) {
+module.exports.buscar = function (req, res) {
     tipoModel.find(req.body.idTipo).then(
         function (tipo) {
             res.send(tipo);

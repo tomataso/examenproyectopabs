@@ -22,11 +22,9 @@ function registrarPokemon(pPokemon) {
 
             codigoPokemon: pPokemon[0],
             nombrePokemon: pPokemon[1],
-            idTipo: pPokemon[2],
-            Tipo: pPokemon[3],
-            idTipo: pPokemon[4],
-            Tipo: pPokemon[5],
-            fotoPokemon: pPokemon[6]
+            tipo1: pPokemon[2],
+            tipo2: pPokemon[3],
+            fotoPokemon: pPokemon[4]
 
         }
     });
