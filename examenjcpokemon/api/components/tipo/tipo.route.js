@@ -11,6 +11,8 @@ router.route('/registrartipo')
         tipo.registrar(req, res);
 });
 
+
+
 router.route('/listartipo')
     .get(function(req, res){
         tipo.listar(req, res);

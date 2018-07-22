@@ -30,11 +30,11 @@ function obtenerListaPokemon(){
 }
 
 function obtenerListaTipo(){
-    let lista = [];
+    let listaTipo = [];
 
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/listarTipo',
+        url : 'http://localhost:4000/api/listartipo',
         type : 'get',
         contentType : 'application/x-www-form-urlencoded; charset=utf-8',
         dataType : 'json',
@@ -54,6 +54,7 @@ function obtenerListaTipo(){
 
       return respuesta;
     
-    return lista;
+    return listaTipo;
 }
+
 

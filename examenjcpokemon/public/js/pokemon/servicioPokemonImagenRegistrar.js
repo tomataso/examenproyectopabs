@@ -1,4 +1,8 @@
+
+
+
 let imagenUrl = '';
+
 $(function () {
     // Configure Cloudinary
     // with credentials available on

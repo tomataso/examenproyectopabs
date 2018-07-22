@@ -82,6 +82,15 @@ function validar() {
         inputNombreEntrenador.classList.remove('error_input');
     }
 
+
+        //Validación del nombre del SEXO
+        if (selectSexo.value == '' || (inputNombreEntrenador.value == 'default')) {
+            selectSexo.classList.add('error_input');
+            bError = true;
+        } else {
+            selectSexo.classList.remove('error_input');
+        }
+
     //Validación de la edad (Edad mayor de 15, menor de 80)
     if (inputEdad.value == '' || (regexSoloNumeros.test(inputEdad.value) == false) || Number(inputEdad.value) < Number(inputEdad.min) || Number(inputEdad.value) > Number(inputEdad.max)) {
         inputEdad.classList.add('error_input');

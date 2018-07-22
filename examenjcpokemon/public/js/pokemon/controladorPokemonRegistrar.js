@@ -26,11 +26,11 @@ const selectTipo2 = document.querySelector('#tipo2Poke');
 //loads------------------------------------------------------
 window.onload = function () {
 
-    let listaTipos = obtenerListaTipo();
+   let listaTipo = obtenerListaTipo();
 
 
-    ftnCreadorDropTipo(selectTipo1, listaTipos);
-    ftnCreadorDropTipo(selectTipo2, listaTipos);
+    ftnCreadorDropTipo(selectTipo1, listaTipo);
+    ftnCreadorDropTipo(selectTipo2, listaTipo);
 
 };
 
@@ -75,10 +75,7 @@ function obtenerDatosPokemon() {
             text: 'El pokémon se registró adecuadamente',
             confirmButtonText: 'Entendido'
         }).then(
-            //function(){
-            // Esto es para devolverse a alguna pagina
-            //window.location.href = "../../html/proyecto/proyecto_listar.html"
-            // }
+    
         );
         limpiarFormulario();
     }
@@ -118,22 +115,37 @@ function limpiarFormulario() {
 };
 
 
-function ftnCreadorDropTipo(pElemento, pListaDatos) {
+function ftnCreadorDropTipo1(tipo1, listaTipos) {
 
-    for (let i = 0; i < pListaDatos.length; i++) {
+    for (let i = 0; i < listaTipos.length; i++) {
 
-        let id = pListaDatos[i]['_id'];
-        let tipo = pListaDatos[i]['Tipo'];
+        let id = listaTipos[i]['_id'];
+        let tipo1 = listaTipos[i]['Tipo'];
         let optionElement = document.createElement("option")
 
 
-        optionElement.appendChild(tipo);
+        optionElement.appendChild(tipo1);
         optionElement.setAttribute('value', id);
-        pElemento.appendChild(optionElement);
+        tipo1.appendChild(optionElement);
 
     }
 };
 
 
+function ftnCreadorDropTipo2(tipo2, listaTipos) {
+
+    for (let i = 0; i < listaTipos.length; i++) {
+
+        let id = listaTipos[i]['_id'];
+        let tipo2 = listaTipos[i]['Tipo'];
+        let optionElement = document.createElement("option")
+
+
+        optionElement.appendChild(tipo2);
+        optionElement.setAttribute('value', id);
+        tipo2.appendChild(optionElement);
+
+    }
+};
 
 

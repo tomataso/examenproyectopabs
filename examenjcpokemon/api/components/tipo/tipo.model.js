@@ -9,5 +9,5 @@ let tipoSchema = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('Tipo', tipoSchema); 
+module.exports = mongoose.model('tipo', tipoSchema); 
 
