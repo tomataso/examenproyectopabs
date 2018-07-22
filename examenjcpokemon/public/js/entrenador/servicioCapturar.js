@@ -10,8 +10,8 @@ function agregarPokemon(infoCapturarPokeBd){
         data:{
 
             _id : infoCapturarPokeBd[0],
-            codigoPokemon : infoCapturarPokeBd[2],
-            nombrePokemon : infoCapturarPokeBd[3],
+            codigoPokemon : infoCapturarPokeBd[1],
+            nombrePokemon : infoCapturarPokeBd[2],
             
         }
       });

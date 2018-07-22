@@ -46,7 +46,13 @@ function ListarPokemon(){
             celdatipo1.innerHTML = listaPokemon[i]['tipo1'];
             celdatipo2.innerHTML = listaPokemon[i]['tipo2'];
         
-
+            // Cambio de Color Según Tipo.
+            if (celdatipo1.value == 'Eléctrico' ) {
+                celdatipo1.classList.add('tipo_electrico');
+                
+            } else {
+                
+            }
         
     }
 

@@ -38,11 +38,11 @@ function obtenerDatosPokemon() {
 
     let optionTipo1 = selectTipo1.options.selectedIndex;
     let sTipo1 = selectTipo1.options[optionTipo1].innerHTML;
-    let sTipo1Id = selectTipo1.value;
+    // let sTipo1Id = selectTipo1.value;
 
     let optionTipo2 = selectTipo2.options.selectedIndex;
     let sTipo2 = selectTipo2.options[optionTipo2].innerHTML;
-    let sTipo2Id = selectTipo2.value;
+    //let sTipo2Id = selectTipo2.value;
 
 
 
@@ -75,26 +75,37 @@ function obtenerDatosPokemon() {
     return bError;
 };
 
+
+
+
+
+
 function validar() {
     let bError = false;
 
     let regexSoloLetras = /^[a-z A-ZáéíóúÁÉÍÓÚñÑ]+$/;
-    let regexSoloNumeros = /^[0-9]+$/;
+    let regexSoloNumeros = /^[0-9]{1,3}$/;
     let regexLetrasNumeros = /^[a-z A-ZáéíóúÁÉÍÓÚñÑ 0-9]+$/;
 
-    if (inputCodigo.value == '' && (regexSoloNumeros.test(inputCodigo.value) == false)) {
-        inputCodigo.classList.add('error-input');
+
+    //Validación del Codigo (Solo numeros)
+    if (inputCodigo.value == '' || (regexSoloNumeros.test(inputCodigo.value) == false)) {
+        inputCodigo.classList.add('error_input');
         bError = true;
     } else {
-        inputCodigo.classList.remove('error-input');
+        inputCodigo.classList.remove('error_input');
     }
 
-    if (inputNombrePokemon.value == '' && (regexLetrasNumeros.test(inputNombrePokemon.value) == false)) {
-        inputNombrePokemon.classList.add('error-input');
+
+    //Validación del nombre del Pokemon
+    if (inputNombrePokemon.value == '' || (regexLetrasNumeros.test(inputNombrePokemon.value) == false)) {
+        inputNombrePokemon.classList.add('error_input');
         bError = true;
     } else {
-        inputNombrePokemon.classList.remove('error-input');
+        inputNombrePokemon.classList.remove('error_input');
     }
+
+ 
 
     return bError;
 };

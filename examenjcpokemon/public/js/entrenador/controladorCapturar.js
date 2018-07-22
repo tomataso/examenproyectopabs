@@ -78,7 +78,7 @@ function obtenerDatosEntrenador(pDatosPokemon){
     
 
    infoCapturarPokeBd.push(idmlabEntrenador,ncodigoPokemon,snombrePokemon);
-    agregarPokemon(infoCapturarPokeBd)
+    agregarPokemon(infoCapturarPokeBd);
     
 
     swal({
