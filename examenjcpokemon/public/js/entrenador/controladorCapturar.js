@@ -4,27 +4,29 @@
 // variables globales----------------------------------------
 const inputBusqueda = document.querySelector('#inputBusqueda');
 const tablaEntrenadores = document.querySelector('#tblPokemon');
-const tablaEntrenadoresAsignados = document.querySelector('#tblEntrenadoresAsignados');
+//const tablaEntrenadoresAsignados = document.querySelector('#tblEntrenadoresAsignados');
 
 //listeners--------------------------------------------------
 inputBusqueda.addEventListener('keyup' , function(){ftnFiltrarListaEntrenadores()});
 
 //loads------------------------------------------------------
 window.onload = function(){
-    ListarEntrenadores();
-    ListarEntrenadoresAsignados();
-    ftnEntrenadoresAsignados();
+    ListarPoke();
+
+   // ListarEntrenadoresAsignados();
+   // ftnEntrenadoresAsignados();
 };
 
 
 //funciones--------------------------------------------------
-function ListarEntrenadores(){
+function ListarPoke(){
     let listaDatosEntrenador = obtenerListaEntrenador();
+    let listaDatosPokemon = obtenerListaPokemon();
 
     let tbody = document.querySelector('#tblPokemon tbody');
     tbody.innerHTML = '';
 
-    for(let i = 0; i < listaDatos.length; i++){
+    for(let i = 0; i < listaDatosPokemon.length; i++){
         
         let fila = tbody.insertRow();
         let celdaCedula = fila.insertCell();
@@ -34,20 +36,19 @@ function ListarEntrenadores(){
         let btnAsignar = document.createElement('input');
         btnAsignar.type = 'button';
         btnAsignar.value = 'Capturar';
-        btnAsignar.name = pDatosEntrenador[i]['_id'];
+        btnAsignar.name = listaDatosPokemon[i]['_id'];
         btnAsignar.classList.add('btn-list');
         btnAsignar.addEventListener('click', function(){
 
-            let pDatosEntrenador = [listaDatosEntrenador[i][obtenerIdEntrenador(),listaDatosEntrenador[i]['_id']];
-            obtenerDatosEntrenador(pDatosEntrenador)
+        
 
-            let pDatosPokemon = [listaDatos[i]['codigoEntrenador'],listaDatos[i]['nombreEntrenador'],obtenerIdEntrenador(),listaDatos[i]['_id']];
-            obtenerDatosEntrenador(pDatos)
+            let pDatosPokemon = [listaDatosPokemon[i]['codigoPokemon'],listaDatosPokemon[i]['nombrePokemon'],listaDatosPokemon[i]['_id'], obtenerIdEntrenador(),listaDatosEntrenador[i]['_id'] ];
+            obtenerDatosEntrenador(pDatosPokemon);
 
         });
 
-        celdaCedula.innerHTML = listaDatos[i]['codigoEntrenador'];
-        celdaNombre.innerHTML = listaDatos[i]['nombreEntrenador'] ;
+        celdaCedula.innerHTML = listaDatosPokemon[i]['codigoPokemon'];
+        celdaNombre.innerHTML = listaDatosPokemon[i]['nombrePokemon'] ;
         btns.appendChild(btnAsignar);
     }
 
@@ -66,20 +67,20 @@ function obtenerIdEntrenador() {
  // -----------------------------
 
 
-function obtenerDatosEntrenador(pDatos){
+function obtenerDatosEntrenador(pDatosPokemon){
 
-    let infoBd =[];
+    let infoCapturarPokeBd =[];
 
-    let idmlabEntrenador = pDatos[4];
-    let ncodigoEntrenador = pDatos[0];    
-    let nombreEstudiante = pDatos[1] ;
+    let idmlabEntrenador = pDatosPokemon[4];
+    let ncodigoPokemon = pDatosPokemon[0];    
+    let snombrePokemon = pDatosPokemon[1] ;
 
    // let idEntrenador = pDatos[2];
    
     
 
-    infoBd.push(idmlabEntrenador,ncodigoEntrenador,nombreEstudiante);
-    agregarPokemon(infoBd)
+   infoCapturarPokeBd.push(idmlabEntrenador,ncodigoPokemon,snombrePokemon);
+    agregarPokemon(infoCapturarPokeBd)
     
 
     swal({
@@ -89,8 +90,8 @@ function obtenerDatosEntrenador(pDatos){
         confirmButtonText : 'Entendido'
     });
     
-    ListarEntrenadoresAsignados();
-    ftnEstudiantesAsignados();
+    //ListarEntrenadoresAsignados();
+    //ftnEstudiantesAsignados();
 };
 
 /*

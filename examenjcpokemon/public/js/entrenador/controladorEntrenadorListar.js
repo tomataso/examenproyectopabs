@@ -81,8 +81,10 @@ function imprimirListaEntrenador(pFiltro){
 
 function ftnAsignarEquipo(){
 	let id = this.name;
-    //window.location.replace('./capturarPokemon.html?id' + id);
-    window.location.replace('./capturarPokemon?id' + id);
+    
+    window.location.replace('./capturarPokemon.html?id' + id);
+
+
 };
 
 

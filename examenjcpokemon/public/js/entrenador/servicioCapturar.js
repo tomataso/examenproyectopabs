@@ -1,4 +1,4 @@
-function agregarPokemon(infoBd){
+function agregarPokemon(infoCapturarPokeBd){
    
     let respuesta = '';
     let peticion = $.ajax({
@@ -9,9 +9,9 @@ function agregarPokemon(infoBd){
         async : false,
         data:{
 
-            _id : infoBd[0],
-            codigoPokemon : infoBd[2],
-            nombrePokemon : infoBd[3],
+            _id : infoCapturarPokeBd[0],
+            codigoPokemon : infoCapturarPokeBd[2],
+            nombrePokemon : infoCapturarPokeBd[3],
             
         }
       });
