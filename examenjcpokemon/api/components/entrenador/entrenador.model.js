@@ -10,8 +10,8 @@ let entrenadorSchema = new mongoose.Schema({
     foto: { type: String },
     equipoPokemon: [
         {
-            codigoPokemon: { type: Number, unique: true, required: true },
-            nombrePokemon: { type: String, unique: true, required: true }
+           
+            nombrePokemon: { type: String}
 
         }
     ]

@@ -12,7 +12,8 @@ module.exports.registrar = function (req, res) {
         nombreEntrenador: req.body.nombreEntrenador,
         edad: req.body.edad,
         sexo: req.body.sexo,
-        foto: req.body.foto
+        foto: req.body.foto,
+      
     });
 
     nuevoEntrenador.save(function (error) {
@@ -42,8 +43,8 @@ module.exports.agregarPokemon = function (req, res) {
             {
                 'equipoPokemon':
                 {
-                    codigoPokemon: req.body.codigoPokemon,
-                    nombrePokemon: req.body.nombrePokemon,
+                  
+                    nombrePokemon: req.body.nombrePokemon
 
                 }
             }
