@@ -11,7 +11,7 @@ router.route('/registrarPokemon')
 
 router.route('/listarPokemon')
     .get(function(req, res){
-        pokemon.listar(req, res);
+        pokemon.listarPokemon(req, res);
 });
 
 
