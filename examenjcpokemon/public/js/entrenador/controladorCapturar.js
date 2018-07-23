@@ -3,11 +3,11 @@
 
 // variables globales----------------------------------------
 const inputBusqueda = document.querySelector('#inputBusqueda');
-const tablaEntrenadores = document.querySelector('#tblPokemon');
+const tablaPokemon = document.querySelector('#tblPokemon');
 
 
 //listeners--------------------------------------------------
-inputBusqueda.addEventListener('keyup' , function(){ftnFiltrarListaEntrenadores()});
+inputBusqueda.addEventListener('keyup' , function(){ftnFiltrarListaPokemon()});
 
 //loads------------------------------------------------------
 window.onload = function(){
@@ -91,3 +91,33 @@ function obtenerDatosEntrenador(pDatosPokemon){
 
 };
 
+function  ftnFiltrarListaPokemon (){
+
+    let criterioBusqueda = inputBusqueda.value.toUpperCase();
+    let filasPokemon = tablaPokemon.getElementsByTagName('tr');
+    let datosFila = null;
+    let datos = null;
+    let valor = null;
+    let coincide = false;
+
+    for (let i = 1; i < filasPokemon.length; i++) {    
+        datosFila = filasPokemon[i];
+        datos = datosFila.getElementsByTagName('td');
+        coincide = false;
+
+        for (let j = 0; j < datos.length; j++) {
+            valor = datos[j].innerHTML.toUpperCase();
+
+            if(valor.includes(criterioBusqueda)){
+                coincide = true;
+            } 
+        }
+        if(coincide){
+            datosFila.classList.remove('esconder');
+        } else {
+            datosFila.classList.add('esconder');
+        }
+    }
+
+   
+};
