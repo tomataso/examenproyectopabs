@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
   
     <title>Listar Entrenador</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
 
 </head>
 <body>
-    <main>
+    
 
-        <input type="text" id="txtFiltro">
+
+        <form action="">
+            <div class=" field filtro">
+              <input type="text" name="inputBusqueda" id="inputBusqueda" placeholder="Busqueda">
+              <label for="inputBusqueda"><i class="fas fa-search"></i>  Búsqueda</label>
+            </div>
+          </form>
+
+
+          <div class="wrapper-listar"> 
         <table id="tblEntrenador">
 
             <thead>
@@ -24,7 +34,11 @@
                 
             </tbody>
         </table>
-    </main>
+    </div>
+   
+
+
+
     <script src="../../js/jquery-3.3.1.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
     <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>

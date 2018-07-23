@@ -20,10 +20,10 @@ window.onload = function(){
 };
 
 
-//listeners--------------------------------------------------
-inputFiltro.addEventListener('keyup' , function(){
-    imprimirListaEntrenador(inputFiltro.value)
-});
+
+
+inputBusqueda.addEventListener('keyup' , function(){ftnFiltrarListaEntrenador()});
+
 
 
 //funciones--------------------------------------------------
@@ -87,4 +87,35 @@ function ftnAsignarEquipo(){
 
 };
 
+
+function  ftnFiltrarListaEntrenador (){
+
+    let criterioBusqueda = inputBusqueda.value.toUpperCase();
+    let filasEntrenador = tablaEntrenador.getElementsByTagName('tr');
+    let datosFila = null;
+    let datos = null;
+    let valor = null;
+    let coincide = false;
+
+    for (let i = 1; i < filasEntrenador.length; i++) {    
+        datosFila = filasEntrenador[i];
+        datos = datosFila.getElementsByTagName('td');
+        coincide = false;
+
+        for (let j = 0; j < datos.length; j++) {
+            valor = datos[j].innerHTML.toUpperCase();
+
+            if(valor.includes(criterioBusqueda)){
+                coincide = true;
+            } 
+        }
+        if(coincide){
+            datosFila.classList.remove('esconder');
+        } else {
+            datosFila.classList.add('esconder');
+        }
+    }
+
+   
+};
 

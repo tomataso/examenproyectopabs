@@ -61,7 +61,7 @@ function ListarPokemon(){
 
 
 
-// Falta el Buscar Por TIPO
+// Filtra Todo 
 function  ftnFiltrarListaPokemon (){
 
     let criterioBusqueda = inputBusqueda.value.toUpperCase();
