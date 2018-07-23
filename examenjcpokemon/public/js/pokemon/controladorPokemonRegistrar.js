@@ -67,7 +67,7 @@ function obtenerDatosPokemon() {
             text: 'El pokémon se registró adecuadamente',
             confirmButtonText: 'Entendido'
         }).then(
-    
+            window.location.href = "../../html/general/index.html"
         );
         limpiarFormulario();
     }
