@@ -15,12 +15,23 @@
   </head>
   <body>
 
-      <div id="top">
-          <h1>Listar Pokémon</h1>
-        </div>
+    <div class="borde">
+      
+    </div>
+    <div id="top">
+      <h1>Listar Pokémon</h1>
+    </div>
+    <div class="menu">
+      <nav>
+        <a href="../general/index.html" id="btnmain" >Página Principal</a> 
+        <a href="../entrenador/entrenadorRegistro.html" id="btnmain">Registrar Entrenador</a> 
+        <a href="../pokemon/pokemonRegistro.html" id="btnmain">Registrar Pokémon</a> 
+        <a href="../entrenador/entrenadorListar.html" id="btnmain" >Lista Entrenador</a> 
 
+      </nav>
+    </div>
 
-      <form action="">
+      <form action="" class="formStyle">
         <div class=" field filtro">
           <input type="text" name="inputBusqueda" id="inputBusqueda" placeholder="Busqueda">
           <label for="inputBusqueda"><i class="fas fa-search"></i>  Búsqueda</label>
@@ -28,10 +39,10 @@
       </form>
 
     <div class="wrapper-listar">
-      <table id="tblPokemon">
+      <table id="tblPokemon" class="formStyle">
         <thead class="encabezados">
 
-             <th>Foto</th>
+            <th>Foto</th>
             <th>Número del Pokemon</th>
             <th>Nombre Pokémon</th>
             <th>Tipo 1</th>
@@ -43,10 +54,7 @@
         </tbody>
       </table>
 
-      <button type="button" id="btnRegresar" class="buttonDash">
-
     </div>
-    <a href="../../html/general/index.html" id="btnRegresar">Regresar</a> 
     
     <script src="../../js/jquery-3.3.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>

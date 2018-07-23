@@ -9,12 +9,22 @@
   </head>
   <body>
 
+    <div class="borde">
+      
+    </div>
+    <div id="top">
+      <h1>Capturar Pokemon</h1>
+    </div>
+    <div class="menu">
+      <nav>
+        <a href="../general/index.html" id="btnmain" >Página Principal</a> 
+        <a href="../pokemon/pokemonRegistro.html" id="btnmain">Registrar Pokémon</a> 
+        <a href="../pokemon/pokemonListar.html" id="btnmain">Lista Pokémon</a> 
+        <a href="../entrenador/entrenadorListar.html" id="btnmain" >Lista Entrenador</a> 
 
-      <div id="top">
-          <h1>Capturar Pokémon</h1>
-        </div>
-
-    <form action="">
+      </nav>
+    </div>
+    <form action="" class="formStyle">
       <div class=" field filtro">
         <input type="text" name="inputBusqueda" id="inputBusqueda" placeholder="Busqueda">
         <label for="inputBusqueda"><i class="fas fa-search"></i>  Búsqueda</label>
@@ -22,7 +32,7 @@
     </form>
     <div class="wrapper-listar estudproy">
 
-      <table id="tblPokemon">
+      <table id="tblPokemon" class="formStyle">
         <thead class="encabezados">
             <th>Número Pokédex</th>
             <th>Nombre</th>
@@ -32,10 +42,6 @@
             
         </tbody>
       </table>
-
-
-
-      <a href="../../html/general/index.html" id="btnRegresar">Regresar</a> 
   
     <script src="../../js/jquery-3.3.1.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
@@ -50,6 +56,8 @@
     <script src="../../js/entrenador/controladorCapturar.js"></script>
 
   
-    
+    <footer>
+      <p>Pokemon 2018</p>
+    </footer>
   </body>
 </html>

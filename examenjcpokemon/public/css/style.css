@@ -4,6 +4,10 @@ body{
 	margin: 0px;
 }
 
+body h1{
+	color:#2d3436;
+}
+
 html{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -52,19 +56,19 @@ footer p{
 }
 #top h1{
 	font-family: 'Raleway', sans-serif;
-	color: #ffa502;
+	color: #ff9f43;
 	font-size: 40px;
 	font-weight: bold;
 }
 .menu{
-	background-color: #ffa502; 
+	background-color: #ff9f43; 
 	padding: 15px;
 }
 
 .menu nav a{
 
-	margin-left: 130px;
 	padding: 5px;
+	font-size: 15px;
 	text-decoration: none;	
 	color: #fff;
 	font-family: 'Raleway', sans-serif;
@@ -93,7 +97,7 @@ footer p{
 #fatherBox div{
 	width: 310px;
 	height:300px;
-    border: 1px solid #73AD21;
+	border: 1px solid #BEBEBE;
     float:left;
     margin-left: 65px;
 
@@ -102,10 +106,10 @@ footer p{
 
   
 #pokebanner{
-	width: 1010px;
+	width: 910px;
     height: 400px;
     margin-top: 5%;
-    margin-left: 19%;
+    margin-left: 22%;
 
 }
 
@@ -116,11 +120,32 @@ footer p{
 
 }
 
-#btnRegresar{
-	
-    margin-left: 70%;
-    color: #ffa502;
-    font-size: 25px;
-    
+.formStyle{
 
+	width: 1000px;
+	height: 400px;
+	margin: auto;
+	background-color: #c8d6e5;
+    border: 1px solid #BEBEBE;
+
+}
+.formStyle table{
+	margin:auto; 
+}
+
+th, td {
+    padding: 13px;
+}
+
+.btnStyle{
+	
+    background-color: #2e86de;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   
 }

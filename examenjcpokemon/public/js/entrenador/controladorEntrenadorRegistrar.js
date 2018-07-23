@@ -50,11 +50,7 @@ function obtenerDatosEntrenador() {
             title: 'Registro exitoso',
             text: 'El Entrenador se registró adecuadamente',
             confirmButtonText: 'Entendido'
-        }).then(
-            function(){
-                window.location.href = "../../html/general/index.html"
-            }
-        );
+        });
 
         limpiarFormulario();
     }

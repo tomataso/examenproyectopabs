@@ -15,38 +15,81 @@
 </head>
 
 <body>
+    <div class="borde">
+      
+    </div>
+    <div id="top">
+      <h1>Registrar Entrenador</h1>
+    </div>
+    <div class="menu">
+      <nav>
+        <a href="../general/index.html" id="btnmain" >Página Principal</a> 
+        <a href="../pokemon/pokemonRegistro.html" id="btnmain">Registrar Pokémon</a> 
+        <a href="../pokemon/pokemonListar.html" id="btnmain">Lista Pokémon</a> 
+        <a href="../entrenador/entrenadorListar.html" id="btnmain" >Lista Entrenador</a> 
 
-        <div id="top">
-                <h1>Registrar Entrenador</h1>
-              </div>
+      </nav>
+    </div>
     <main>
-        <form>
+        <form class="formStyle">
 
-            <img src="" alt="Foto" id="txtImagenEntrenador">
-            
-            <label for="codigoEntrenador">Número del Entrenador:</label>
-            <input type="number" id="codigoEntrenador"></input>
+            <table>
+        
 
-            <label for="txtNombreEntrenador">Nombre del Entrenador:</label>
-            <input type="text" id="txtNombreEntrenador">
+                <tr>
+                    <th>
+                        <img src="" alt="Foto" id="txtImagenEntrenador">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="codigoEntrenador">Número del Entrenador:</label>
+                    </th>
+                    <th>
+                        <input type="number" id="codigoEntrenador"></input>
+                    </th>
+                </tr> 
+                <tr>
+                    <th>
+                        <label for="txtNombreEntrenador">Nombre del Entrenador:</label>
+                    </th>
+                    <th>   
+                        <input type="text" id="txtNombreEntrenador">
+                    </th>
+                </tr>    
+                <tr>
+                    <th>    
+                        <label for="txtEdad">Edad</label>
+                    </th>
+                    <th>
+                        <input type="number" id="txtEdad" min="16" max="79">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="selectSexo">Sexo:</label>
+                    </th>
+                    <th>
+                        <select id="selectSexo">
+                            <option value="default">Seleccione una opción</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+                    </th>
+                </tr>
 
-            <label for="txtEdad">Edad</label>
-            <input type="number" id="txtEdad" min="16" max="79">
+                <tr>
+                    <th>
+                        <button type="button" id="btnSeleccionarImagenEntrenador" class="btnStyle">Subir foto</button>
+                    </th>
+                    <th>
+                        <button type="button" id="btnRegistrarEntrenador" class="btnStyle">Registrar</button>
+                    </th>
+                </tr>    
 
-            <label for="selectSexo">Sexo:</label>
-            <select id="selectSexo">
-                <option value="default">Seleccione una opción</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-            </select>
+            </table>
 
-            <button type="button" id="btnSeleccionarImagenEntrenador">Subir foto</button>
-
-            <button type="button" id="btnRegistrarEntrenador">Registrar</button>
         </form>
-
-        <a href="../../html/general/index.html" id="btnRegresar">Regresar</a> 
-
 
     </main>
     <script src="../../js/jquery-3.3.1.js"></script>
@@ -59,7 +102,9 @@
     <script src="../../js/entrenador/servicioEntrenadorRegistrar.js"></script>
     <script src="../../js/entrenador/servicioEntrenadorImagenRegistrar.js"></script>
 
-
+    <footer>
+      <p>Pokemon 2018</p>
+    </footer>
 </body>
 
 </html>

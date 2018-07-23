@@ -9,12 +9,27 @@
 
 </head>
 <body>
-    
-        <div id="top">
-                <h1>Listar Entrenador</h1>
-              </div>
 
-        <form action="">
+    <div class="borde">
+      
+    </div>
+    <div id="top">
+      <h1>Listar Entrenador</h1>
+    </div>
+    <div class="menu">
+      <nav>
+        <a href="../general/index.html" id="btnmain" >Página Principal</a> 
+        <a href="../entrenador/entrenadorRegistro.html" id="btnmain">Registrar Entrenador</a> 
+        <a href="../pokemon/pokemonRegistro.html" id="btnmain">Registrar Pokémon</a> 
+        <a href="../pokemon/pokemonListar.html" id="btnmain">Lista Pokémon</a> 
+
+
+      </nav>
+    </div>
+    
+
+
+        <form action="" class="formStyle">
             <div class=" field filtro">
               <input type="text" name="inputBusqueda" id="inputBusqueda" placeholder="Busqueda">
               <label for="inputBusqueda"><i class="fas fa-search"></i>  Búsqueda</label>
@@ -23,7 +38,7 @@
 
 
           <div class="wrapper-listar"> 
-        <table id="tblEntrenador">
+        <table id="tblEntrenador" class="formStyle">
 
             <thead>
                 <th>Foto</th>
@@ -38,7 +53,7 @@
         </table>
     </div>
    
-    <a href="../../html/general/index.html" id="btnRegresar">Regresar</a> 
+
 
 
     <script src="../../js/jquery-3.3.1.js"></script>
