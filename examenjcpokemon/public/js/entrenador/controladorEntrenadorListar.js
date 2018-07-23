@@ -55,7 +55,7 @@ function imprimirListaEntrenador(pFiltro){
             imagen.src = listaEntrenador[i]['foto'];
             imagen.classList.add('imageSettings');
     
-           
+        
     
             let btnAsignarEquipo = document.createElement('input');
             btnAsignarEquipo.type = 'button';
@@ -68,6 +68,8 @@ function imprimirListaEntrenador(pFiltro){
             cNombre.innerHTML = listaEntrenador[i]['nombreEntrenador'];
             cEdad.innerHTML = listaEntrenador[i]['edad'];
             cSexo.innerHTML = listaEntrenador[i]['sexo'];
+
+      
 
             foto.appendChild(imagen);
             btns.appendChild(btnAsignarEquipo);

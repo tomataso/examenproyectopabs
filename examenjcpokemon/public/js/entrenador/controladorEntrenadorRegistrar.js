@@ -105,6 +105,6 @@ function validar() {
 function limpiarFormulario() {
     sNombreEntrenador.value = '';
     inputEdad.value = 0;
-
+    nCodigoEntrenador = '';
 }
 

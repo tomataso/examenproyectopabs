@@ -34,15 +34,15 @@ function obtenerDatosPokemon() {
     let sNombrePokemon = inputNombrePokemon.value;
 
 
-   // let sselectSexo = selectSexo.value;
+  
 
     let optionTipo1 = selectTipo1.options.selectedIndex;
     let sTipo1 = selectTipo1.options[optionTipo1].innerHTML;
-    // let sTipo1Id = selectTipo1.value;
+   
 
     let optionTipo2 = selectTipo2.options.selectedIndex;
     let sTipo2 = selectTipo2.options[optionTipo2].innerHTML;
-    //let sTipo2Id = selectTipo2.value;
+    
 
 
 
