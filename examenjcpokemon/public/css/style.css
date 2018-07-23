@@ -8,3 +8,9 @@ html{
 .tipo_electrico{
     color: #f1c40f;
 }
+
+.esconder{
+    display: none;
+  }
+
+  

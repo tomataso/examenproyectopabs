@@ -3,7 +3,7 @@
 
 // variables globales----------------------------------------
 const inputBusqueda = document.querySelector('#inputBusqueda');
-const tablaProyectos = document.querySelector('#tblPokemon');
+const tablaPokemon = document.querySelector('#tblPokemon');
 
 //listeners--------------------------------------------------
 inputBusqueda.addEventListener('keyup' , function(){ftnFiltrarListaPokemon()});
